@@ -1,4 +1,4 @@
-Some usefull python code ready to copy and paste!
+Some useful python code ready to copy and paste!
 
 Only download setup.py ,you don't need to download the other files, as running setup.py will download them! Or you can just copy and paste setup.py
 
