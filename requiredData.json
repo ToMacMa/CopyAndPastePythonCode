@@ -4,8 +4,8 @@
     "pythonLibraries": [
         "tkinter",
         "requests",
-        "os",
-        "json"
+        "json",
+        "clipboard"
     ],
     "requiredDowloads": [
         "https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py"
