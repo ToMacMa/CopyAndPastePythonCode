@@ -1,5 +1,5 @@
 import tkinter as tk
-import requests
+import requests, os
 
 
 
@@ -16,10 +16,41 @@ def downloads():
     with open("requiredData.json", "w") as file:
         file.write("")
     downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/requiredData.json', 'requiredData.json')
+
+    print("Downloaded/Updated requiredData.json !")
+
     with open("main.py", "w") as file:
         file.write("")
     downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py', 'main.py')
-if 0 == 1:
+
+    print("Dowloaded/Updated main.py !")
+
+    i = 0
+    files = list()
+    for file in os.listdir():
+        files.append(file)
+
+        if file == "copyFiles":
+            i = 1
+
+    if i == 0:
+        os.mkdir("./copyFiles/")
+
+    with open("copyFiles/tkWindowNoContent.txt", "w") as file:
+        file.write("")
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowNoContent.txt', './copyFiles/tkWindowNoContent.txt')
+
+    with open("copyFiles/tkWindowWithBtn.txt", "w") as file:
+        file.write("")
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowWithBtn.txt', './copyFiles/tkWindowWithBtn.txt')
+    
+    with open("copyFiles/tkWindowWithLabel.txt", "w") as file:
+        file.write("")
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowWithLabel.txt', './copyFiles/tkWindowWithLabel.txt')
+
+    print("Downloaded/Updated copyFiles folder and it's children!")
+
+if 1 == 1:
     downloads()
 
 
