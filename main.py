@@ -145,6 +145,7 @@ def createBtnWindowContents(btnWindow, btnId):
         text.configure(state="disabled")
         text.configure(inactiveselectbackground=text.cget("selectbackground"))
 
+
         buttonCopy = tk.Button(btnWindow, text="Copy",width=5,height=5,command= lambda: copy2clip(contents))
         buttonCopy.place(x=0,y=90)
         
@@ -163,8 +164,8 @@ def StartWindow(title):
     button = tk.Button(root, text="Tkinter",width=10,height=5, command= lambda: onButtonClick(1))
     button.place(x=0,y=0)
 
-    button = tk.Button(root, text="Random Copyables",width=15,height=5, command= lambda: onButtonClick(2))
-    button.place(x=100,y=0)
+    #button = tk.Button(root, text="Download file (requests)",width=15,height=5, command= lambda: onButtonClick(2-1))
+    #button.place(x=100,y=0)
 
     #button = tk.Button(root, text="Settings",width=10,height=5, command= lambda: onButtonClick("settings"))
     #button.pack()
