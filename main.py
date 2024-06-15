@@ -98,7 +98,7 @@ def StartWindow(windowGeometry, title):
     button = tk.Button(root, text="Tkinter",width=10,height=5, command= lambda: onButtonClick(1))
     button.place(x=0,y=0)
 
-    button = tk.Button(root, text="Math",width=10,height=5, command= lambda: onButtonClick(2))
-    button.place(x=100,y=0)
+    #button = tk.Button(root, text="Math",width=10,height=5, command= lambda: onButtonClick(2))
+    #button.place(x=100,y=0)
 
     root.mainloop()
