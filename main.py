@@ -8,6 +8,15 @@ def onButtonClick(btnId):
     defaultBtnWindowSettings.append("800x200")
     defaultBtnWindowSettings.append("400x400")
 
+    if btnId == "settings":
+        btnWindow = tk.Tk()
+        btnWindow.title("Settings")
+        btnWindow.geometry("1000x800")
+
+        createSettingsMenu(btnWindow)
+
+        btnWindow.mainloop()
+
     if btnId == 1:
         btnWindow = tk.Tk()
         btnWindow.title("Tkinter copyables")
@@ -124,7 +133,7 @@ def copy2clip(txt):
 def StartWindow(title):
     root = tk.Tk()
     root.title(str(title))
-    root.geometry("500x300")
+    root.geometry("500x235")
 
     button = tk.Button(root, text="Tkinter",width=10,height=5, command= lambda: onButtonClick(1))
     button.place(x=0,y=0)
@@ -132,7 +141,25 @@ def StartWindow(title):
     #button = tk.Button(root, text="Math",width=10,height=5, command= lambda: onButtonClick(2))
     #button.place(x=100,y=0)
 
+    #button = tk.Button(root, text="Settings",width=10,height=5, command= lambda: onButtonClick("settings"))
+    #button.pack()
+
     root.mainloop()
+
+def createSettingsMenu(btnWindow):
+    with open("./settings.json", "r") as file:
+            contents = file.read()
+
+    #global textSettings
+    textSettings = tk.Text(btnWindow,width=600,height=40)
+    textSettings.insert(1.0, contents); textSettings.place(x=45,y=0)
+
+    textSettings.configure(state="normal")
+    textSettings.configure(inactiveselectbackground=textSettings.cget("selectbackground"))
+
+
+    ##buttonSave = tk.Button(btnWindow, text="Save", width=5,height=5,command= lambda: saveSettings())
+    ##buttonSave.place(x=0,y=0)
 
 if __name__ == "__main__":
     StartWindow("Main window")
