@@ -3,13 +3,13 @@ while 13 > i:
     print("")
     i = i + 1
 
-print("installing/updating requests...")
+print("installing/updating required libraries...")
 
 import subprocess
 subprocess.run("pip3 install requests")
 subprocess.run("pip3 install clipboard")
 
-print("succesfully installed/updated requests")
+print("succesfully installed/updated required libraries")
 
 import tkinter as tk
 import requests, os, json
