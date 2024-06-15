@@ -85,6 +85,13 @@ try:
 except:
     print("idk, this is not meant to happen")
 
-exec("def downloadFile(link, saveName): url = str(link); r = requests.get(url, allow_redirects=True)open(str(saveName), 'wb').write(r.content); INPUT = str(input('Do you wanna update setup.py ? Y or N')); if INPUT == 'Y': with open('setup.py', 'w') as file: file.write(''); downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py', 'setup.py');")
+exec("""
+YN = str(input('Do you wanna update setup.py ? Y or N')); 
+if YN == 'Y': 
+    with open('setup.py', 'w') as file: 
+        file.write(''); 
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py', 'setup.py');
+
+""")
 
 main.StartWindow("Main window")
