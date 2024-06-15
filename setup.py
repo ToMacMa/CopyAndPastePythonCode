@@ -7,6 +7,7 @@ print("installing/updating requests...")
 
 import subprocess
 subprocess.run("pip3 install requests")
+subprocess.run("pip3 install clipboard")
 
 print("succesfully installed/updated requests")
 
