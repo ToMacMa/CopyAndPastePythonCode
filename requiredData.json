@@ -6,5 +6,8 @@
         "requests",
         "os",
         "json"
+    ],
+    "requiredDowloads": [
+        "https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py"
     ]
 }
