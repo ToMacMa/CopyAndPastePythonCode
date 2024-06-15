@@ -145,9 +145,6 @@ def createBtnWindowContents(btnWindow, btnId):
         text.configure(state="disabled")
         text.configure(inactiveselectbackground=text.cget("selectbackground"))
 
-        #buttonRun = tk.Button(btnWindow, text="Run", width=5,height=5,command= lambda: runCode(contents))
-        #buttonRun.place(x=0,y=0)
-
         buttonCopy = tk.Button(btnWindow, text="Copy",width=5,height=5,command= lambda: copy2clip(contents))
         buttonCopy.place(x=0,y=90)
         
