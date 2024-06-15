@@ -1,12 +1,20 @@
-import tkinter as tk
-import requests, os
-
-
-
 i = 0
 while 13 > i:
     print("")
     i = i + 1
+
+print("installing/updating requests...")
+
+import subprocess
+subprocess.run("pip3 install requests")
+
+print("succesfully installed/updated requests")
+
+import tkinter as tk
+import requests, os, json
+
+
+
 
 def downloadFile(link, saveName):
     url = str(link)
@@ -40,6 +48,15 @@ def downloads():
     if i == 0:
         os.mkdir("./copyFiles/")
 
+    i = 0
+    for file in os.listdir():
+
+        if file == "settings.json":
+            i = 1
+    
+    if i == 0:
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/defaultSettings.json', 'settings.json')
+
     with open("copyFiles/tkWindowNoContent.txt", "w") as file:
         file.write("")
         downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowNoContent.txt', './copyFiles/tkWindowNoContent.txt')
@@ -54,7 +71,7 @@ def downloads():
 
     print("Downloaded/Updated copyFiles folder and it's children!")
 
-if 1 == 1:
+if 0 == 1:
     downloads()
 
 
