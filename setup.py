@@ -70,12 +70,32 @@ def downloads():
         file.write("")
         downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowWithLabel.txt', './copyFiles/tkWindowWithLabel.txt')
 
+    with open("copyFiles/reDownloadFile.txt", "w") as file:
+        file.write("")
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/copyFiles/tkWindowWithLabel.txt', './copyFiles/reDownloadFile.txt')
+
     print("Downloaded/Updated copyFiles folder and it's children!")
 
-if 0 == 1:
+if 1 == 1:
     downloads()
 
 
-import main
+try:
+    import main
+except:
+    print("idk, this is not meant to happen")
+
+exec("""
+        def downloadFile(link, saveName):
+            url = str(link)
+            r = requests.get(url, allow_redirects=True)
+            open(str(saveName), 'wb').write(r.content)
+        INPUT = str(input("Do you wanna update setup.py ? Y or N"))
+        if INPUT == 'Y':
+            with open("setup.py", "w") as file:
+                file.write("")
+            downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py', 'setup.py')
+            
+    """)
 
 main.StartWindow("Main window")
