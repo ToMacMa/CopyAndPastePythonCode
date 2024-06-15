@@ -1,0 +1,9 @@
+{
+    "version": "0.1",
+    "versionType": "pre-alpha",
+    "pythonLibraries": [
+        "tkinter",
+        "requests",
+        "os"
+    ]
+}
