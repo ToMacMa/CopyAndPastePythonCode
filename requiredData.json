@@ -4,6 +4,7 @@
     "pythonLibraries": [
         "tkinter",
         "requests",
-        "os"
+        "os",
+        "json"
     ]
 }
