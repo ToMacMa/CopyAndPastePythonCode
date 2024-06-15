@@ -17,7 +17,11 @@ def downloads():
         file.write("")
     downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/requiredData.json', 'requiredData.json')
 
-    print("Downloaded/Updated requiredData.json !")
+    with open("defaultSettings.json", "w") as file:
+        file.write("")
+    downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/defaultSettings.json',"defaultSettings.json")
+
+    print("Downloaded/Updated jsons !")
 
     with open("main.py", "w") as file:
         file.write("")
