@@ -90,7 +90,7 @@ YN = str(input('Do you wanna update setup.py ? Y or N'));
 if YN == 'Y': 
     with open('setup.py', 'w') as file: 
         file.write(''); 
-        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/main.py', 'setup.py');
+        downloadFile('https://raw.githubusercontent.com/ToMacMa/CopyAndPastePythonCode/main/setup.py', 'setup.py');
 
 """)
 
